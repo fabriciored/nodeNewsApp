@@ -1,16 +1,13 @@
 const app = require('./src/config/server');
 
-app.get('/', (req, res) => {
-    res.render('home/index')
-})
+const newsFormRoute = require('./src/routes/newsform');
+newsFormRoute(app);
 
-app.get('/form_news', (req, res) => {
-    res.render('admin/form_add_news.ejs')
-})
+const homeRoute = require('./src/routes/home');
+homeRoute(app);
 
-app.get('/newsPortal', (req, res) => {
-    res.render('news/newsPortal')
-})
+const newsRoute = require('./src/routes/news');
+newsRoute(app);
 
 
 app.listen(3000, () => {
