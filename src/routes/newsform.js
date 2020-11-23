@@ -1,5 +1,5 @@
 module.exports = (app) => {
-app.get('/newsForm', (req, res) => {
+app.get('/newsform', (req, res) => {
     res.render('admin/form_add_news.ejs')
 })
 }
