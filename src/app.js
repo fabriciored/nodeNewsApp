@@ -2,14 +2,18 @@ const express = require('express');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    res.send('<html><body><p>Portal de noticias<p><body><html>')
+    res.render('home/index')
 })
-app.get('/tecnologia', (req, res) => {
-    res.send('<html><body><p>Tecnologia<p><body><html>')
+
+app.get('/form_news', (req, res) => {
+    res.render('admin/form_add_news.ejs')
 })
-app.get('/games', (req, res) => {
-    res.send('<html><body><p>Games<p><body><html>')
+
+app.get('/newsPortal', (req, res) => {
+    res.send('news/newsPortal')
 })
 
 
