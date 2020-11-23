@@ -10,7 +10,7 @@ module.exports = (app) => {
     });
 
     connection.query("select * from news", (err, result) => {
-        res.render("news/newsPortal", {news: result});
+        res.render("news/news", {news: result});
     });
 
     // 
