@@ -13,7 +13,7 @@ app.get('/form_news', (req, res) => {
 })
 
 app.get('/newsPortal', (req, res) => {
-    res.send('news/newsPortal')
+    res.render('news/newsPortal')
 })
 
 
