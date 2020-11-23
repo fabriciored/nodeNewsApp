@@ -1,8 +1,4 @@
-const express = require('express');
-
-const app = express();
-
-app.set('view engine', 'ejs');
+const app = require('./src/config/server');
 
 app.get('/', (req, res) => {
     res.render('home/index')
@@ -18,5 +14,5 @@ app.get('/newsPortal', (req, res) => {
 
 
 app.listen(3000, () => {
-    console.log('Server running on Express')
+    console.log('Server running on port 3000')
 })
