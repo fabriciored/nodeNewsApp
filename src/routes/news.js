@@ -3,10 +3,10 @@ module.exports = function(app){
     app.get('/news', function(req,res){
 
         var connection = app.config.dbConnection();
+        var newsModel = app.src.models.newsModel;
 
-        connection.query("SELECT * FROM news", function(error, result){
+        newsModel.getNews(connection, function(error, result){
             res.render('news/news', { news : result });
         });
-
     });
-}
+};
