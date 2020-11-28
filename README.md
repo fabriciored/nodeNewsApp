@@ -1,2 +1,1 @@
 ## Node News App
-
